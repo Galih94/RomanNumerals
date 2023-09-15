@@ -14,9 +14,9 @@ final class RomanNumeralsTests: XCTestCase {
     }
     
     // MARK: Helper
-    private func expect(from symbols: [Symbol], expectAnswers: [String]) {
+    private func expect(from symbols: [Symbol], expectAnswers: [String], file: StaticString = #filePath, line: UInt = #line ) {
         symbols.enumerated().forEach { index, symbol in
-            XCTAssertEqual(symbol.rawValue, expectAnswers[index])
+            XCTAssertEqual(symbol.rawValue, expectAnswers[index], file: file, line: line)
         }
     }
 }
