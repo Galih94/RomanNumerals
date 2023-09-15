@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "5D3EAD8E-E33D-4D32-B777-14C498EFEF7F",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:RomanNumerals.xcodeproj",
+        "identifier" : "2A156ADC2AB43AFF0097184C",
+        "name" : "RomanNumeralsTests"
+      }
+    }
+  ],
+  "version" : 1
+}

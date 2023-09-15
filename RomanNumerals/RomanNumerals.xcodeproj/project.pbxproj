@@ -31,6 +31,7 @@
 		2A156AED2AB440DF0097184C /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		2A156AEF2AB447930097184C /* SymbolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTests.swift; sourceTree = "<group>"; };
 		2A156AF12AB4A2160097184C /* RomanNumerals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanNumerals.swift; sourceTree = "<group>"; };
+		2A156AF32AB4A2F40097184C /* RomanNumerals.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RomanNumerals.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +56,7 @@
 		2A156ACB2AB43AFF0097184C = {
 			isa = PBXGroup;
 			children = (
+				2A156AF32AB4A2F40097184C /* RomanNumerals.xctestplan */,
 				2A156AD72AB43AFF0097184C /* RomanNumerals */,
 				2A156AE12AB43AFF0097184C /* RomanNumeralsTests */,
 				2A156AD62AB43AFF0097184C /* Products */,

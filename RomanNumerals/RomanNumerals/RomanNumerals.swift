@@ -21,20 +21,12 @@ public final class RomanNumerals {
     private init () {}
     
     private static func calculate(from accumulation: Int, with number: Int, previousNumber: Int) -> Int {
-        if number <= TENS_NUMBER && isAccumulationZero(accumulation) {
-            if accumulation < number {
-                return number - accumulation
-            } else {
-                return addAccumulationAndNewNumber(from: accumulation, with: number)
-            }
+        if isAccumulationZero(accumulation) {
+            return number
+        } else if previousNumber < number {
+            return (accumulation - previousNumber) + (number - previousNumber)
         } else {
-            if isAccumulationZero(accumulation) {
-                return number
-            } else if previousNumber < number {
-                return (accumulation - previousNumber) + (number - previousNumber)
-            } else {
-                return addAccumulationAndNewNumber(from: accumulation, with: number)
-            }
+            return addAccumulationAndNewNumber(from: accumulation, with: number)
         }
     }
     
