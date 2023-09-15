@@ -13,7 +13,6 @@ public enum RomanNumerals {
     static let ONE_INDEX = 1
     
     static let ZERO_NUMBER = 0
-    static let TENS_NUMBER = 10
     static let DEFAULT_NUMBER = 0
     
     static let ANY_ERROR_CODE = 0
