@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A156ADE2AB43AFF0097184C /* RomanNumerals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A156AD52AB43AFF0097184C /* RomanNumerals.framework */; };
 		2A156AE32AB43AFF0097184C /* RomanNumeralsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A156AE22AB43AFF0097184C /* RomanNumeralsTests.swift */; };
+		2A156AEE2AB440DF0097184C /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A156AED2AB440DF0097184C /* Symbol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +26,7 @@
 		2A156AD52AB43AFF0097184C /* RomanNumerals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RomanNumerals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A156ADD2AB43AFF0097184C /* RomanNumeralsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RomanNumeralsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A156AE22AB43AFF0097184C /* RomanNumeralsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanNumeralsTests.swift; sourceTree = "<group>"; };
+		2A156AED2AB440DF0097184C /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		2A156AD72AB43AFF0097184C /* RomanNumerals */ = {
 			isa = PBXGroup;
 			children = (
+				2A156AED2AB440DF0097184C /* Symbol.swift */,
 			);
 			path = RomanNumerals;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				TargetAttributes = {
 					2A156AD42AB43AFF0097184C = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 					2A156ADC2AB43AFF0097184C = {
 						CreatedOnToolsVersion = 14.3;
@@ -187,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A156AEE2AB440DF0097184C /* Symbol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +336,7 @@
 		2A156AE82AB43AFF0097184C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -355,6 +361,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -362,6 +369,7 @@
 		2A156AE92AB43AFF0097184C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -393,6 +401,7 @@
 		2A156AEB2AB43AFF0097184C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5K6BH2N7SF;
@@ -408,6 +417,7 @@
 		2A156AEC2AB43AFF0097184C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5K6BH2N7SF;

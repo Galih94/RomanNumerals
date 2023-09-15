@@ -6,16 +6,7 @@
 //
 
 import XCTest
-
-public enum Symbol: String {
-    case I
-    case V
-    case X
-    case L
-    case C
-    case D
-    case M
-}
+import RomanNumerals
 
 final class RomanNumeralsTests: XCTestCase {
 
