@@ -27,8 +27,21 @@ public final class RomanNumerals {
 
 final class RomanNumeralsTests: XCTestCase {
     func test_convertTextGreekToNumber() {
-        XCTAssertEqual(try? RomanNumerals.convertRomanTextToNumber("I"), 1)
-        XCTAssertEqual(try? RomanNumerals.convertRomanTextToNumber("II"), 2)
-        XCTAssertNoThrow(try? RomanNumerals.convertRomanTextToNumber("A"))
+        expect(from: ["I", "II"], expectAnswers: [1, 2])
+        expectErrors(from: ["A", "GALIH", "G", "1"])
+    }
+    
+    // MARK: Helper
+    
+    private func expect(from texts: [String], expectAnswers: [Int], file: StaticString = #filePath, line: UInt = #line ) {
+        texts.enumerated().forEach { index, text in
+            XCTAssertEqual(try? RomanNumerals.convertRomanTextToNumber(text), expectAnswers[index], file: file, line: line)
+        }
+    }
+    
+    private func expectErrors(from texts: [String], file: StaticString = #filePath, line: UInt = #line ) {
+        texts.forEach { text in
+            XCTAssertNoThrow(try? RomanNumerals.convertRomanTextToNumber(text), file: file, line: line)
+        }
     }
 }
