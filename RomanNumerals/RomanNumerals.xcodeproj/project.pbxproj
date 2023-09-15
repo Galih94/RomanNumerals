@@ -10,6 +10,7 @@
 		2A156ADE2AB43AFF0097184C /* RomanNumerals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A156AD52AB43AFF0097184C /* RomanNumerals.framework */; };
 		2A156AE32AB43AFF0097184C /* RomanNumeralsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A156AE22AB43AFF0097184C /* RomanNumeralsTests.swift */; };
 		2A156AEE2AB440DF0097184C /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A156AED2AB440DF0097184C /* Symbol.swift */; };
+		2A156AF02AB447930097184C /* SymbolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A156AEF2AB447930097184C /* SymbolTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,7 @@
 		2A156ADD2AB43AFF0097184C /* RomanNumeralsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RomanNumeralsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A156AE22AB43AFF0097184C /* RomanNumeralsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanNumeralsTests.swift; sourceTree = "<group>"; };
 		2A156AED2AB440DF0097184C /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
+		2A156AEF2AB447930097184C /* SymbolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				2A156AE22AB43AFF0097184C /* RomanNumeralsTests.swift */,
+				2A156AEF2AB447930097184C /* SymbolTests.swift */,
 			);
 			path = RomanNumeralsTests;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A156AE32AB43AFF0097184C /* RomanNumeralsTests.swift in Sources */,
+				2A156AF02AB447930097184C /* SymbolTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
