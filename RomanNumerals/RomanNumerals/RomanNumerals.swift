@@ -7,7 +7,7 @@
 
 import Foundation
 
-public final class RomanNumerals {
+public enum RomanNumerals {
     
     static let ZERO_INDEX = 0
     static let ONE_INDEX = 1
@@ -17,8 +17,6 @@ public final class RomanNumerals {
     static let DEFAULT_NUMBER = 0
     
     static let ANY_ERROR_CODE = 0
-    
-    private init () {}
     
     private static func calculate(from accumulation: Int, with number: Int, previousNumber: Int) -> Int {
         if isAccumulationZero(accumulation) {
