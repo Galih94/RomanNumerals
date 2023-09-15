@@ -12,8 +12,6 @@ import RomanNumerals
 public final class RomanNumerals {
     
     static let TENS_NUMBER = 10
-    static let FIFTYS_NUMBER = 50
-    static let THOUSANDS_NUMBER = 1000
     
     private init () {}
     
@@ -71,8 +69,8 @@ public final class RomanNumerals {
 
 final class RomanNumeralsTests: XCTestCase {
     func test_convertTextGreekToNumber() {
-        expect(from: ["I", "II", "IV", "IX", "X", "XI", "XXX", "LI", "LIV", "CIX", "CX"],
-               expectAnswers: [1, 2, 4, 9, 10, 11, 30, 51, 54, 109, 110])
+        expect(from: ["I", "II", "IV", "IX", "X", "XI", "XXX", "LI", "LIV", "CIX", "CX", "MCMXCIV"],
+               expectAnswers: [1, 2, 4, 9, 10, 11, 30, 51, 54, 109, 110, 1994])
         expectErrors(from: ["A", "GALIH", "G", "1"])
     }
     
