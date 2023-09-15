@@ -9,13 +9,13 @@ import Foundation
 
 public enum RomanNumerals {
     
-    static let ZERO_INDEX = 0
-    static let ONE_INDEX = 1
+    private static let ZERO_INDEX = 0
+    private static let ONE_INDEX = 1
     
-    static let ZERO_NUMBER = 0
-    static let DEFAULT_NUMBER = 0
+    private static let ZERO_NUMBER = 0
+    private static let DEFAULT_NUMBER = 0
     
-    static let ANY_ERROR_CODE = 0
+    private static let ANY_ERROR_CODE = 0
     
     private static func calculate(from accumulation: Int, with number: Int, previousNumber: Int) -> Int {
         if accumulation == ZERO_NUMBER {
