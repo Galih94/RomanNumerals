@@ -18,8 +18,7 @@ public final class RomanNumerals {
             guard let symbolValue = Symbol(rawValue: array[i]) else {
                 throw NSError(domain: "Found error on converting Roman text ", code: 0)
             }
-            let currentTextValue = symbolValue.convertNominalTextGreekToNumber()
-            result += currentTextValue
+            result += symbolValue.convertNominalTextGreekToNumber()
         }
         return result
     }
