@@ -11,7 +11,14 @@ import RomanNumerals
 
 public final class RomanNumerals {
     
+    static let ZERO_INDEX = 0
+    static let ONE_INDEX = 1
+    
+    static let ZERO_NUMBER = 0
     static let TENS_NUMBER = 10
+    static let DEFAULT_NUMBER = 0
+    
+    static let ANY_ERROR_CODE = 0
     
     private init () {}
     
@@ -33,12 +40,16 @@ public final class RomanNumerals {
         }
     }
     
+    private static func isFirstIndex(_ index: Int) -> Bool {
+        return index == ZERO_INDEX
+    }
+    
     private static func previousIndex(_ index: Int) -> Int? {
-        return index == 0 ? nil : index - 1
+        return isFirstIndex(index) ? nil : index - ONE_INDEX
     }
     
     private static func isAccumulationZero(_ accumulation: Int) -> Bool {
-        return accumulation == 0
+        return accumulation == ZERO_NUMBER
     }
     
     private static func addAccumulationAndNewNumber(from accumulation: Int, with number: Int) -> Int {
@@ -48,18 +59,18 @@ public final class RomanNumerals {
     private static func getPreviousIndexNumber(index: Int?, from array: [String]) -> Int {
         guard let previousIndex = index,
                 let previousSymbolValue = Symbol(rawValue: array[previousIndex]) else {
-            return 0
+            return DEFAULT_NUMBER
         }
         return previousSymbolValue.convertNominalTextGreekToNumber()
     }
     
     public static func convertRomanTextToNumber(_ text: String) throws -> Int {
         let array = text.map { String(describing: $0) }
-        var result = 0
-        for i in 0..<array.count {
+        var result = DEFAULT_NUMBER
+        for i in ZERO_INDEX..<array.count {
             let previousNumber = getPreviousIndexNumber(index: previousIndex(i), from: array)
             guard let symbolValue = Symbol(rawValue: array[i]) else {
-                throw NSError(domain: "Found error on converting Roman text ", code: 0)
+                throw NSError(domain: "Found error on converting Roman text ", code: ANY_ERROR_CODE)
             }
             result = calculate(from: result, with: symbolValue.convertNominalTextGreekToNumber(), previousNumber: previousNumber)
         }
