@@ -14,19 +14,19 @@ final class RomanNumeralsTests: XCTestCase {
     }
     
     func test_convertNominalTextGreekToNumber() {
-        XCTAssertEqual(Symbol.I.convertNominalTextGreekToNumber(), 1)
-        XCTAssertEqual(Symbol.V.convertNominalTextGreekToNumber(), 5)
-        XCTAssertEqual(Symbol.X.convertNominalTextGreekToNumber(), 10)
-        XCTAssertEqual(Symbol.L.convertNominalTextGreekToNumber(), 50)
-        XCTAssertEqual(Symbol.C.convertNominalTextGreekToNumber(), 100)
-        XCTAssertEqual(Symbol.D.convertNominalTextGreekToNumber(), 500)
-        XCTAssertEqual(Symbol.M.convertNominalTextGreekToNumber(), 1000)
+        expect(from: [.I, .V, .X, .L, .C, .D, .M], expectAnswers: [1, 5, 10, 50, 100, 500, 1000])
     }
     
     // MARK: Helper
     private func expect(from symbols: [Symbol], expectAnswers: [String], file: StaticString = #filePath, line: UInt = #line ) {
         symbols.enumerated().forEach { index, symbol in
             XCTAssertEqual(symbol.rawValue, expectAnswers[index], file: file, line: line)
+        }
+    }
+    
+    private func expect(from symbols: [Symbol], expectAnswers: [Int], file: StaticString = #filePath, line: UInt = #line ) {
+        symbols.enumerated().forEach { index, symbol in
+            XCTAssertEqual(symbol.convertNominalTextGreekToNumber(), expectAnswers[index], file: file, line: line)
         }
     }
 }
