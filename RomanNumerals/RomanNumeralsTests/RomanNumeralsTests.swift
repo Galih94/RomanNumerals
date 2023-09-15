@@ -11,6 +11,14 @@ import RomanNumerals
 public final class RomanNumerals {
     private init () {}
     
+    private static func calculate(from accumulation: Int, with number: Int) -> Int {
+        if accumulation < number {
+            return number - accumulation
+        } else {
+            return accumulation + number
+        }
+    }
+    
     public static func convertRomanTextToNumber(_ text: String) throws -> Int {
         let array = text.map { String(describing: $0) }
         var result = 0
@@ -18,7 +26,7 @@ public final class RomanNumerals {
             guard let symbolValue = Symbol(rawValue: array[i]) else {
                 throw NSError(domain: "Found error on converting Roman text ", code: 0)
             }
-            result += symbolValue.convertNominalTextGreekToNumber()
+            result = calculate(from: result, with: symbolValue.convertNominalTextGreekToNumber())
         }
         return result
     }
@@ -26,7 +34,8 @@ public final class RomanNumerals {
 
 final class RomanNumeralsTests: XCTestCase {
     func test_convertTextGreekToNumber() {
-        expect(from: ["I", "II"], expectAnswers: [1, 2])
+        expect(from: ["I", "II", "IV", "IX", "X", "XI", "XXX", "CX", "LVIII"],
+               expectAnswers: [1, 2, 4, 9, 10, 11, 30, 110, 58])
         expectErrors(from: ["A", "GALIH", "G", "1"])
     }
     
