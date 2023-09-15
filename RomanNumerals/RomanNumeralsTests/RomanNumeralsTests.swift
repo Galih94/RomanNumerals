@@ -11,8 +11,8 @@ import RomanNumerals
 final class RomanNumeralsTests: XCTestCase {
     func test_convertTextGreekToNumber() {
         do {
-            try expect(from: ["I", "II", "IV", "IX", "X", "XI", "XXX", "LI", "LIV", "CIX", "CX", "MCMXCIV"],
-                       expectAnswers: [1, 2, 4, 9, 10, 11, 30, 51, 54, 109, 110, 1994])
+            try expect(from: ["I", "II", "IV", "IX", "X", "XI", "XXX", "LI", "LIV", "CIX", "CX", "DIX", "MCMXCIV"],
+                       expectAnswers: [1, 2, 4, 9, 10, 11, 30, 51, 54, 109, 110, 509, 1994])
             try expectErrors(from: ["A", "GALIH", "G", "1"])
         } catch {
             XCTFail("Failed to run tests")
