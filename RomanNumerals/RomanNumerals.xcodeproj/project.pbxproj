@@ -11,6 +11,7 @@
 		2A156AE32AB43AFF0097184C /* RomanNumeralsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A156AE22AB43AFF0097184C /* RomanNumeralsTests.swift */; };
 		2A156AEE2AB440DF0097184C /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A156AED2AB440DF0097184C /* Symbol.swift */; };
 		2A156AF02AB447930097184C /* SymbolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A156AEF2AB447930097184C /* SymbolTests.swift */; };
+		2A156AF22AB4A2160097184C /* RomanNumerals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A156AF12AB4A2160097184C /* RomanNumerals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		2A156AE22AB43AFF0097184C /* RomanNumeralsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanNumeralsTests.swift; sourceTree = "<group>"; };
 		2A156AED2AB440DF0097184C /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		2A156AEF2AB447930097184C /* SymbolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTests.swift; sourceTree = "<group>"; };
+		2A156AF12AB4A2160097184C /* RomanNumerals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanNumerals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				2A156AED2AB440DF0097184C /* Symbol.swift */,
+				2A156AF12AB4A2160097184C /* RomanNumerals.swift */,
 			);
 			path = RomanNumerals;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A156AF22AB4A2160097184C /* RomanNumerals.swift in Sources */,
 				2A156AEE2AB440DF0097184C /* Symbol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
