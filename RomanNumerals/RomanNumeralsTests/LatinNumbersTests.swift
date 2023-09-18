@@ -48,6 +48,8 @@ public enum LatinNumbers {
             } else {
                 return "D\(LatinNumbers.calculate(from: number - 500))"
             }
+        } else if (1000...4999).contains(number) {
+            return "M\(LatinNumbers.calculate(from: number - 1000))"
         } else {
             return ""
         }
@@ -100,6 +102,11 @@ final class LatinNumbersTests: XCTestCase {
     func test_convertNumber_underThousand() {
         expect(from: [505, 610, 800, 852, 950, 999 ],
                expectedSymbols: ["DV", "DCX", "DCCC", "DCCCLII", "CML", "CMXCIX"])
+    }
+    
+    func test_convertNumber_overThousandBelowFiveThousand() {
+        expect(from: [1005, 2000, 2023, 4900, 4999 ],
+               expectedSymbols: ["MV", "MM", "MMXXIII", "MMMMCM", "MMMMCMXCIX"])
     }
     
     // MARK: Helper
