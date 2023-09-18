@@ -25,10 +25,16 @@ public enum LatinNumbers {
                 return "V\(LatinNumbers.calculate(from: number - 5))"
             }
         } else if (10...49).contains(number) {
-            if (40...50).contains(number) {
+            if (40...49).contains(number) {
                 return "XL\(LatinNumbers.calculate(from: number - 40))"
             } else {
                 return "X\(LatinNumbers.calculate(from: number - 10))"
+            }
+        } else if (50...99).contains(number) {
+            if (90...99).contains(number) {
+                return "XC\(LatinNumbers.calculate(from: number - 90))"
+            } else {
+                return "L\(LatinNumbers.calculate(from: number - 50))"
             }
         } else {
             return ""
@@ -67,6 +73,11 @@ final class LatinNumbersTests: XCTestCase {
     func test_convertNumber_underFifty() {
         expect(from: [20, 22, 30, 35, 40, 49 ],
                expectedSymbols: ["XX", "XXII", "XXX", "XXXV", "XL", "XLIX"])
+    }
+    
+    func test_convertNumber_underHundred() {
+        expect(from: [51, 59, 60, 75, 80, 90, 99 ],
+               expectedSymbols: ["LI", "LIX", "LX", "LXXV", "LXXX", "XC", "XCIX"])
     }
     
     // MARK: Helper
