@@ -6,10 +6,11 @@
 //
 
 import XCTest
+import RomanNumerals
 
 public enum LatinNumbers {
     public static func convertRomanNumerals(from number: Int) -> String {
-        return "I"
+        return NumberSymbol.convert(number)
     }
 }
 
