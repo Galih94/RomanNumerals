@@ -18,6 +18,12 @@ public enum LatinNumbers {
             } else {
                 return "I\(LatinNumbers.calculate(from: number - 1))"
             }
+        } else if number < 10 {
+            if number == 10 - 1 {
+                return "IX"
+            } else {
+                return "V\(LatinNumbers.calculate(from: number - 5))"
+            }
         } else {
             return ""
         }
@@ -40,6 +46,11 @@ final class LatinNumbersTests: XCTestCase {
     func test_convertNumber_underFive() {
         expect(from: [1,2,3,4],
                expectedSymbols: ["I", "II", "III", "IV"])
+    }
+    
+    func test_convertNumber_underTen() {
+        expect(from: [6,7,8,9],
+               expectedSymbols: ["VI", "VII", "VIII", "IX"])
     }
     
     // MARK: Helper
