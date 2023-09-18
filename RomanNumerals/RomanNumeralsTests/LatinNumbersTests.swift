@@ -24,6 +24,12 @@ public enum LatinNumbers {
             } else {
                 return "V\(LatinNumbers.calculate(from: number - 5))"
             }
+        } else if number < 50 {
+            if (40...50).contains(number) {
+                return "XL\(LatinNumbers.calculate(from: number - 40))"
+            } else {
+                return "X\(LatinNumbers.calculate(from: number - 10))"
+            }
         } else {
             return ""
         }
@@ -44,13 +50,18 @@ final class LatinNumbersTests: XCTestCase {
     }
     
     func test_convertNumber_underFive() {
-        expect(from: [1,2,3,4],
+        expect(from: [1, 2, 3, 4],
                expectedSymbols: ["I", "II", "III", "IV"])
     }
     
     func test_convertNumber_underTen() {
-        expect(from: [6,7,8,9],
+        expect(from: [6, 7, 8, 9],
                expectedSymbols: ["VI", "VII", "VIII", "IX"])
+    }
+    
+    func test_convertNumber_underFifty() {
+        expect(from: [20, 22, 30, 35, 40, 49 ],
+               expectedSymbols: ["XX", "XXII", "XXX", "XXXV", "XL", "XLIX"])
     }
     
     // MARK: Helper
