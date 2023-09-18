@@ -12,19 +12,19 @@ public enum LatinNumbers {
     private static func calculate(from number: Int) -> String {
         if number == 0 {
             return ""
-        } else if number < 5 {
+        } else if (1...4).contains(number) {
             if number == 5 - 1 {
                 return "IV"
             } else {
                 return "I\(LatinNumbers.calculate(from: number - 1))"
             }
-        } else if number < 10 {
+        } else if (5...9).contains(number) {
             if number == 10 - 1 {
                 return "IX"
             } else {
                 return "V\(LatinNumbers.calculate(from: number - 5))"
             }
-        } else if number < 50 {
+        } else if (10...49).contains(number) {
             if (40...50).contains(number) {
                 return "XL\(LatinNumbers.calculate(from: number - 40))"
             } else {
@@ -44,21 +44,26 @@ public enum LatinNumbers {
 }
 
 final class LatinNumbersTests: XCTestCase {
+    func test_convertNumber_negativeNumber() {
+        expect(from: [-1, -2, -3, -4],
+               expectedSymbols: ["", "", "", ""])
+    }
+    
     func test_convertNumber_singleSymbol() {
         expect(from: [1, 5, 10, 50, 100, 500, 1000, 0],
                expectedSymbols: ["I", "V", "X", "L", "C", "D", "M", ""])
     }
-    
+
     func test_convertNumber_underFive() {
         expect(from: [1, 2, 3, 4],
                expectedSymbols: ["I", "II", "III", "IV"])
     }
-    
+
     func test_convertNumber_underTen() {
         expect(from: [6, 7, 8, 9],
                expectedSymbols: ["VI", "VII", "VIII", "IX"])
     }
-    
+
     func test_convertNumber_underFifty() {
         expect(from: [20, 22, 30, 35, 40, 49 ],
                expectedSymbols: ["XX", "XXII", "XXX", "XXXV", "XL", "XLIX"])
