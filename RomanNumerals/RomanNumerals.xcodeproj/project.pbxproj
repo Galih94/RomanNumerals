@@ -14,6 +14,7 @@
 		2A156AEE2AB440DF0097184C /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A156AED2AB440DF0097184C /* Symbol.swift */; };
 		2A156AF02AB447930097184C /* SymbolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A156AEF2AB447930097184C /* SymbolTests.swift */; };
 		2A156AF22AB4A2160097184C /* RomanNumerals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A156AF12AB4A2160097184C /* RomanNumerals.swift */; };
+		2A3375D12AB83ECD00817EFE /* LatinNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3375D02AB83ECD00817EFE /* LatinNumbers.swift */; };
 		2A68AC872AB5EEBE005646FB /* NumberSymbolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68AC862AB5EEBE005646FB /* NumberSymbolTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		2A156AEF2AB447930097184C /* SymbolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTests.swift; sourceTree = "<group>"; };
 		2A156AF12AB4A2160097184C /* RomanNumerals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanNumerals.swift; sourceTree = "<group>"; };
 		2A156AF32AB4A2F40097184C /* RomanNumerals.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RomanNumerals.xctestplan; sourceTree = "<group>"; };
+		2A3375D02AB83ECD00817EFE /* LatinNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatinNumbers.swift; sourceTree = "<group>"; };
 		2A68AC862AB5EEBE005646FB /* NumberSymbolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberSymbolTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 				2A156AED2AB440DF0097184C /* Symbol.swift */,
 				2A156AF12AB4A2160097184C /* RomanNumerals.swift */,
 				2A0429352AB7F6E800F24FCA /* NumberSymbol.swift */,
+				2A3375D02AB83ECD00817EFE /* LatinNumbers.swift */,
 			);
 			path = RomanNumerals;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A156AF22AB4A2160097184C /* RomanNumerals.swift in Sources */,
+				2A3375D12AB83ECD00817EFE /* LatinNumbers.swift in Sources */,
 				2A156AEE2AB440DF0097184C /* Symbol.swift in Sources */,
 				2A0429362AB7F6E800F24FCA /* NumberSymbol.swift in Sources */,
 			);
