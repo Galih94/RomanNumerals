@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A0429362AB7F6E800F24FCA /* NumberSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0429352AB7F6E800F24FCA /* NumberSymbol.swift */; };
+		2A0429382AB7FE2000F24FCA /* LatinNumbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0429372AB7FE2000F24FCA /* LatinNumbersTests.swift */; };
 		2A156ADE2AB43AFF0097184C /* RomanNumerals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A156AD52AB43AFF0097184C /* RomanNumerals.framework */; };
 		2A156AE32AB43AFF0097184C /* RomanNumeralsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A156AE22AB43AFF0097184C /* RomanNumeralsTests.swift */; };
 		2A156AEE2AB440DF0097184C /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A156AED2AB440DF0097184C /* Symbol.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		2A0429352AB7F6E800F24FCA /* NumberSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberSymbol.swift; sourceTree = "<group>"; };
+		2A0429372AB7FE2000F24FCA /* LatinNumbersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatinNumbersTests.swift; sourceTree = "<group>"; };
 		2A156AD52AB43AFF0097184C /* RomanNumerals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RomanNumerals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A156ADD2AB43AFF0097184C /* RomanNumeralsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RomanNumeralsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A156AE22AB43AFF0097184C /* RomanNumeralsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanNumeralsTests.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				2A156AE22AB43AFF0097184C /* RomanNumeralsTests.swift */,
 				2A156AEF2AB447930097184C /* SymbolTests.swift */,
 				2A68AC862AB5EEBE005646FB /* NumberSymbolTests.swift */,
+				2A0429372AB7FE2000F24FCA /* LatinNumbersTests.swift */,
 			);
 			path = RomanNumeralsTests;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A68AC872AB5EEBE005646FB /* NumberSymbolTests.swift in Sources */,
+				2A0429382AB7FE2000F24FCA /* LatinNumbersTests.swift in Sources */,
 				2A156AE32AB43AFF0097184C /* RomanNumeralsTests.swift in Sources */,
 				2A156AF02AB447930097184C /* SymbolTests.swift in Sources */,
 			);
