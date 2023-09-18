@@ -42,6 +42,12 @@ public enum LatinNumbers {
             } else {
                 return "C\(LatinNumbers.calculate(from: number - 100))"
             }
+        } else if (500...999).contains(number) {
+            if (900...999).contains(number) {
+                return "CM\(LatinNumbers.calculate(from: number - 900))"
+            } else {
+                return "D\(LatinNumbers.calculate(from: number - 500))"
+            }
         } else {
             return ""
         }
@@ -89,6 +95,11 @@ final class LatinNumbersTests: XCTestCase {
     func test_convertNumber_underFiveHundred() {
         expect(from: [105, 110, 200, 250, 450, 499 ],
                expectedSymbols: ["CV", "CX", "CC", "CCL", "CDL", "CDXCIX"])
+    }
+    
+    func test_convertNumber_underThousand() {
+        expect(from: [505, 610, 800, 852, 950, 999 ],
+               expectedSymbols: ["DV", "DCX", "DCCC", "DCCCLII", "CML", "CMXCIX"])
     }
     
     // MARK: Helper
