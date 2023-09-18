@@ -32,14 +32,15 @@ public enum NumberSymbol {
 
 final class NumberSymbolTests: XCTestCase {
     func test_translateNumberSymbols() {
-        XCTAssertEqual(NumberSymbol.convert(1), "I")
-        XCTAssertEqual(NumberSymbol.convert(5), "V")
-        XCTAssertEqual(NumberSymbol.convert(10), "X")
-        XCTAssertEqual(NumberSymbol.convert(50), "L")
-        XCTAssertEqual(NumberSymbol.convert(100), "C")
-        XCTAssertEqual(NumberSymbol.convert(500), "D")
-        XCTAssertEqual(NumberSymbol.convert(1000), "M")
-        XCTAssertEqual(NumberSymbol.convert(0), "")
+        expect(from: [1, 5, 10, 50, 100, 500, 1000, 0],
+               expectedSymbols: ["I", "V", "X", "L", "C", "D", "M", ""])
+    }
+    
+    // MARK: Helper
+    private func expect(from numbers: [Int], expectedSymbols: [String], file: StaticString = #filePath, line: UInt = #line ) {
+        for i in 0..<numbers.count {
+            XCTAssertEqual(NumberSymbol.convert(numbers[i]), expectedSymbols[i], file: file, line: line)
+        }
     }
 
 }
