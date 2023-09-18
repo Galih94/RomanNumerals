@@ -12,6 +12,7 @@ public enum LatinNumbers {
     
     public static func convertRomanNumerals(from number: Int) -> String {
         guard NumberSymbol.convert(number) != "" else {
+            
             return ""
         }
         return NumberSymbol.convert(number)
@@ -19,7 +20,7 @@ public enum LatinNumbers {
 }
 
 final class LatinNumbersTests: XCTestCase {
-    func test_convertNumber() {
+    func test_convertNumber_singleSymbol() {
         expect(from: [1, 5, 10, 50, 100, 500, 1000, 0],
                expectedSymbols: ["I", "V", "X", "L", "C", "D", "M", ""])
     }
